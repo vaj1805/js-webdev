@@ -1,0 +1,42 @@
+JS execution context.
+everytime : 
+{} -> global exec context. (this) 
+in Browser Global exec context -> window object.
+
+2. function execution context
+3. Eval execution context
+
+
+how js code runs :
+    {} -> [js code]   // memory creation phase.
+    -> execution phase.
+    
+let val1 = 10
+let val2 = 5
+
+function addNum(num1 , num2) {
+    let total = num1 + num2
+    return total
+}
+
+let result1 = addNum(val1 , val2)
+let result2 = addNum(10,2)
+
+
+//code is run through global execution. and given to 'this' keyword.
+// 2. memory phase. -> all variables are named and undefined is put inside them.
+// if fucntion in code then -> eg : addNum(Defination).
+//3. execution code val1 -> 10
+//                  val2-> 5
+
+//from line 3 to 6 no use since definition already held.
+
+
+
+call stack : 
+|       |
+|       |
+|       | // one() eg: a func.
+|_______| //global execution
+
+//*var has global scope.
